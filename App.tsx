@@ -4,14 +4,13 @@ import { useSettings } from './hooks/useSettings';
 import { StepTopic } from './components/steps/StepTopic';
 import { StepDetail } from './components/steps/StepDetail';
 import { ResultPanel } from './components/ResultPanel';
-import { SettingsModal } from './components/SettingsModal';
-import { SparklesIcon, PlusIcon, SettingsIcon } from './components/icons';
+import { SparklesIcon, PlusIcon } from './components/icons';
 import { ModalProvider } from './contexts/ModalContext';
 import { ToastProvider } from './contexts/ToastContext';
 import { ProgressSteps, Step } from './components/ui/ProgressSteps';
 
 const App: React.FC = () => {
-  const { apiKeys, saveApiKeys, isSettingsOpen, openSettings, closeSettings } = useSettings();
+  const { apiKeys } = useSettings();
 
   const {
     activeStep, setActiveStep,
@@ -82,13 +81,7 @@ const App: React.FC = () => {
                 <SparklesIcon className="w-10 h-10 text-brand-primary" />
                 <h1 className="text-3xl font-bold text-slate-900 tracking-tight">AI SEO 블로그 글 생성기</h1>
               </div>
-              <button
-                onClick={openSettings}
-                className="p-2 text-slate-500 hover:text-brand-primary hover:bg-slate-100 rounded-full transition-colors"
-                title="설정"
-              >
-                <SettingsIcon className="w-7 h-7" />
-              </button>
+
             </div>
           </header>
 
@@ -153,12 +146,7 @@ const App: React.FC = () => {
             />
           </main>
 
-          <SettingsModal
-            isOpen={isSettingsOpen}
-            onClose={closeSettings}
-            apiKeys={apiKeys}
-            onSave={saveApiKeys}
-          />
+
         </div>
       </ToastProvider>
     </ModalProvider>

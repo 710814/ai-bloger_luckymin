@@ -57,49 +57,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, a
                         <p className="text-xs text-slate-400 mt-1">Google AI Studio에서 무료로 발급받을 수 있습니다.</p>
                     </div>
 
-                    <div className="pt-4 border-t border-slate-100">
-                        <h3 className="text-sm font-semibold text-slate-900 mb-3">Notion 연동 (선택)</h3>
-                        <div className="space-y-4">
-                            <div>
-                                <label htmlFor="notionApiKey" className="block text-sm font-medium text-slate-700 mb-1">
-                                    Notion API Key
-                                    {apiKeys.notionApiKey && (
-                                        <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-                                            ✓ 설정됨
-                                        </span>
-                                    )}
-                                </label>
-                                <input
-                                    type="password"
-                                    id="notionApiKey"
-                                    name="notionApiKey"
-                                    value={keys.notionApiKey}
-                                    onChange={handleChange}
-                                    placeholder={apiKeys.notionApiKey ? "••••••••••••••••••••••••••••••••" : "secret_..."}
-                                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="notionDatabaseId" className="block text-sm font-medium text-slate-700 mb-1">
-                                    Notion Database ID
-                                    {apiKeys.notionDatabaseId && (
-                                        <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-                                            ✓ 설정됨
-                                        </span>
-                                    )}
-                                </label>
-                                <input
-                                    type="text"
-                                    id="notionDatabaseId"
-                                    name="notionDatabaseId"
-                                    value={keys.notionDatabaseId}
-                                    onChange={handleChange}
-                                    placeholder={apiKeys.notionDatabaseId ? "••••••••••••••••••••••••••••••••" : "데이터베이스 ID 입력"}
-                                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-all"
-                                />
-                            </div>
-                        </div>
-                    </div>
+
 
                     <div className="flex items-center justify-end gap-3 pt-6 mt-2">
                         <button

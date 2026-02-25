@@ -1,0 +1,5 @@
+{
+  "name": "AI SEO Blog Writer",
+  "description": "An AI-powered application that helps users generate SEO-optimized blog posts. It suggests categories and topics, then writes a complete, human-like article following a structured narrative.",
+  "requestFramePermissions": []
+}

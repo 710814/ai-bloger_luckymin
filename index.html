@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI SEO Blog Writer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#1e40af',
+              'brand-secondary': '#3b82f6',
+              'brand-light': '#dbeafe',
+              'brand-dark': '#1e3a8a',
+              slate: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b',
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b',
+                900: '#0f172a',
+              },
+            },
+            borderRadius: {
+              '4xl': '2rem',
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  '--tw-prose-body': theme('colors.slate[700]'),
+                  '--tw-prose-headings': theme('colors.slate[900]'),
+                  '--tw-prose-lead': theme('colors.slate[600]'),
+                  '--tw-prose-links': theme('colors.brand.secondary'),
+                  '--tw-prose-bold': theme('colors.slate[900]'),
+                  '--tw-prose-counters': theme('colors.slate[500]'),
+                  '--tw-prose-bullets': theme('colors.slate[400]'),
+                  '--tw-prose-hr': theme('colors.slate[200]'),
+                  '--tw-prose-quotes': theme('colors.slate[900]'),
+                  '--tw-prose-quote-borders': theme('colors.slate[200]'),
+                  '--tw-prose-captions': theme('colors.slate[500]'),
+                  '--tw-prose-code': theme('colors.slate[900]'),
+                  '--tw-prose-pre-code': theme('colors.slate[200]'),
+                  '--tw-prose-pre-bg': theme('colors.slate[800]'),
+                  fontSize: '1.125rem', // 18px
+                  lineHeight: '1.75',
+                  h2: {
+                    fontSize: '2em',
+                    fontWeight: '800',
+                  },
+                  h3: {
+                    fontSize: '1.5em',
+                    fontWeight: '700',
+                  },
+                },
+              },
+            }),
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-in-up': 'slideInUp 0.5s ease-out',
+              'scale-in': 'scaleIn 0.2s ease-out',
+              'slide-in-right': 'slideInRight 0.3s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              slideInUp: {
+                '0%': { transform: 'translateY(20px)', opacity: 0 },
+                '100%': { transform: 'translateY(0)', opacity: 1 },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.95)', opacity: 0 },
+                '100%': { transform: 'scale(1)', opacity: 1 },
+              },
+              slideInRight: {
+                '0%': { transform: 'translateX(100%)', opacity: 0 },
+                '100%': { transform: 'translateX(0)', opacity: 1 },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.14.0",
+    "@vercel/node": "https://aistudiocdn.com/@vercel/node@^5.3.26"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

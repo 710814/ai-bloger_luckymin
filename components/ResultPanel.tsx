@@ -72,7 +72,8 @@ export const ResultPanel: React.FC<ResultPanelProps> = ({
                 </div>
             )}
 
-            {post && (
+            {/* SNS 콘텐츠 변환 및 블로그 포스트 번역 영역 숨김 처리 */}
+            {/* {post && (
                 <>
                     <ActionCard title="SNS 콘텐츠로 변환">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -113,7 +114,7 @@ export const ResultPanel: React.FC<ResultPanelProps> = ({
                         ))}
                     </ActionCard>
                 </>
-            )}
+            )} */}
         </div>
     );
 };

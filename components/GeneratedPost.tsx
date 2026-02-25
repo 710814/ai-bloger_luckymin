@@ -168,7 +168,8 @@ export const GeneratedPost: React.FC<GeneratedPostProps> = ({ post, onSave, isSa
           <TabButton tabName="HTML" label="HTML" />
         </div>
         <div className="flex items-center gap-3">
-          <div className="relative group">
+          {/* 글 저장하기 버튼 숨김 처리 */}
+          {/* <div className="relative group">
             <button
               onClick={onSave}
               disabled={isSaved || isSaving || hasError}
@@ -184,7 +185,7 @@ export const GeneratedPost: React.FC<GeneratedPostProps> = ({ post, onSave, isSa
                 Notion 연동 오류로 저장할 수 없습니다.
               </div>
             )}
-          </div>
+          </div> */}
           {/* <button
             onClick={handleDownload}
             className="flex-shrink-0 flex items-center gap-2 px-4 py-3 bg-slate-100 text-slate-700 text-base font-bold rounded-lg hover:bg-slate-200 focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-brand-primary/50 transition-colors duration-200"
